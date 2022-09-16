@@ -1,5 +1,5 @@
 try:from colorama import Fore;from requests import post
-except ModuleNotFoundError:exit('[!] Download The Missing Module !')
+except Exception as e:print(f'[!] Download The Missing Module ! , {e}');exit()
 def IN1():
     user=input(f"\n[{Fore.RED}?{Fore.RESET}] username : ")
     r1=post("https://i.instagram.com:443/api/v1/users/lookup/",headers={"Connection": "close", "X-IG-Connection-Type": "WIFI","mid":"XOSINgABAAG1IDmaral3noOozrK0rrNSbPuSbzHq","X-IG-Capabilities": "3R4=","Accept-Language": "ar-sa","Content-Type": "application/x-www-form-urlencoded; charset=UTF-8","User-Agent": "Instagram 99.4.0 vv1ck_TweakPY (TweakPY_vv1ck)","Accept-Encoding": "gzip, deflate"},data={"signed_body": "35a2d547d3b6ff400f713948cdffe0b789a903f86117eb6e2f3e573079b2f038.{\"q\":\"%s\"}" % user });inf=r1.json()
