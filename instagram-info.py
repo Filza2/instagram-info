@@ -43,7 +43,7 @@ def Instagram_info3(user):
         try:console.print(f"""- Profile Pic URL : [bold red]{str(userData2[0]).replace("'",'').replace("avatar",'').replace("[{:",'')}[/bold red]""")
         except:pass
     except Exception as e:
-        console.print(f"- [bold red]Error[/bold red], [bold red]Can't Get {user} info[/bold red] ! ")
+        console.print(f"- [bold red]Error[/bold red], [bold red]Can't Get {user} info[/bold red] ! ");exit()
     
 def Instagram_info2(user):
     try:
